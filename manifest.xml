@@ -5,9 +5,17 @@
   <maintainer>Malte Wirkus/malte.wirkus@dfki.de</maintainer>
   <license>LGPLv2 or later</license>
 
-  <depend package="gui/control_ui" />
+  <!--
+  The dependencies on gui/control_ui and gui/vizkit are removed.
+  They are not needed in ESROCOS, which only uses the C++ library of
+  gui/robot_model.
+  These two packages depend in turn of many other packages, which would 
+  unnecessarily increase the size of the ESROCOS install and potentially 
+  cause build problems.
+  -->
+  <!-- <depend package="gui/control_ui" /> -->
   <depend package="base/types" />
   <depend package="control/kdl_parser" />
   <depend package="control/urdfdom" />
-  <depend package="gui/vizkit" />
+  <!-- <depend package="gui/vizkit" /> -->
 </package>

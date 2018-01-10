@@ -1,3 +1,15 @@
+####
+This package is a fork of https://github.com/rock-gui/gui-robot_model.
+
+The original package depends on gui/control_ui and gui/vizkit. These 
+dependencies are removed in this fork. They are not needed in ESROCOS, 
+which only uses the C++ library of gui/robot_model.
+
+These two packages depend in turn of many other packages, which would 
+unnecessarily increase the size of the ESROCOS install and potentially 
+cause build problems.
+####
+
 NOTE
 This directory structure follows some simple rules, to allow for generic build
 processes and simplify reuse of this project. 
